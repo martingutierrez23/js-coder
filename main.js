@@ -24,14 +24,18 @@ cuaderno1.onclick=()=>{
     alert("Agregaste un cuaderno rojo al carrito");
     carrito.push(cuadernoRojo);
     console.log(carrito);
+    sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
 cuaderno2.onclick=()=>{
     alert("Agregaste un cuaderno naranja al carrito");
     carrito.push(cuadernoNaranja);
     console.log(carrito);
+    sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
 cuaderno3.onclick=()=>{
     alert("Agregaste un cuaderno azul al carrito");
     carrito.push(cuadernoAzul);
     console.log(carrito);
+    sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
