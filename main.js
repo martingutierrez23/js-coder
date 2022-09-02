@@ -1,9 +1,6 @@
 const carrito=[];
 
-function saludar(){
-    alert("bienvenidos a nuestra pagina web")
-}
-saludar();
+
 //objeto
 function cuaderno (color,marca,precio) {
     this.color=color;
@@ -21,19 +18,37 @@ let cuaderno2=document.getElementById("cuadernoNaranja");
 let cuaderno3=document.getElementById("cuadernoAzul");
 //evento de carrito
 cuaderno1.onclick=()=>{
-    alert("Agregaste un cuaderno rojo al carrito");
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'agregaste un producto al carrito',
+        showConfirmButton: false,
+        timer: 2000
+      })
     carrito.push(cuadernoRojo);
     console.log(carrito);
     sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
 cuaderno2.onclick=()=>{
-    alert("Agregaste un cuaderno naranja al carrito");
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'agregaste un producto al carrito',
+      showConfirmButton: false,
+      timer: 2000
+    })
     carrito.push(cuadernoNaranja);
     console.log(carrito);
     sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
 cuaderno3.onclick=()=>{
-    alert("Agregaste un cuaderno azul al carrito");
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'agregaste un producto al carrito',
+        showConfirmButton: false,
+        timer: 2000
+      })
     carrito.push(cuadernoAzul);
     console.log(carrito);
     sessionStorage.setItem("carrito", JSON.stringify(carrito))
