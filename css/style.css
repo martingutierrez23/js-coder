@@ -2,7 +2,13 @@ img{
     border-radius: 15px;
 }
 
-h2{
+h2, h3{
     text-align: center;
     padding: 10px;
+    text-decoration: underline;
 }
+.container{
+    width: 500px;
+    margin-top: 40px;
+    background-color: whitesmoke;
+  }

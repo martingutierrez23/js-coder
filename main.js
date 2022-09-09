@@ -2,14 +2,15 @@ const carrito=[];
 
 
 //objeto
-function cuaderno (color,marca,precio) {
+function cuaderno (nombre, color,marca,precio) {
+    this.nombre=nombre;
     this.color=color;
     this.marca=marca;
     this.precio=precio;
 }
-const cuadernoNaranja= new cuaderno("naranja","exito","$700");
-const cuadernoRojo= new cuaderno("rojo","exito","$720");
-const cuadernoAzul= new cuaderno("azul","exito","$710");
+const cuadernoNaranja= new cuaderno( "cuaderno exito", "naranja","exito","$700");
+const cuadernoRojo= new cuaderno( "cuaderno exito", "rojo","exito","$720");
+const cuadernoAzul= new cuaderno( "cuaderno exito", "azul","exito","$710");
 
 
 //creando evento
@@ -53,4 +54,14 @@ cuaderno3.onclick=()=>{
     console.log(carrito);
     sessionStorage.setItem("carrito", JSON.stringify(carrito))
 }
+function obtenerDatos(){
+  const URLGET="https://api.itbook.store/1.0/new";
+  fetch(URLGET)
+ .then (resultado => resultado.json())
+ .then ( libros => {
+  console.log(libros.books);
+       })
+  }
+obtenerDatos();
+
 
